@@ -1,0 +1,312 @@
+
+
+@media screen and (min-width: 993px) and (max-width: 1257px) {
+body {
+  .last_news .new_card_sub,
+  .last_news .new_card_title {
+    display: flex;
+    justify-content: start !important;
+    align-items: start !important;
+    flex-direction: column !important;
+    line-height: 45px;
+    margin-top: -20px !important;
+  }
+ .last_news .card_1_sub {
+  display: flex;
+  justify-content: start !important;
+  align-items: start !important;
+  flex-direction: column !important;
+  }
+  .card_date {
+    margin-top: -30px !important;
+  }
+  .card_1_sub {
+    flex-direction: column !important;
+  }
+  .card_1_sub .card_button {
+    margin-top: 20px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .new_card_1 .card_date span  {
+    color: #fff !important;
+  }
+  .hide_page_tablet {
+    display: none !important;
+  }
+  .head__media_modal{
+    width: 300px;
+    height: 40vh !important;
+    position: absolute !important;
+}
+.head_mobile_page_sub {
+  display: none !important; 
+}
+.mobile_modal_head_page {
+  display: none !important;
+}
+.new_card{
+ height: 420px !important;
+}
+.head_mobile_page_item {
+  display: none !important;
+}
+}
+}
+
+@media only screen and(min-width: 768px) and(max-width: 992px) {
+  body {
+    .header_blog {
+      padding: 20px 0 50px !important;
+      .header_blog_sub_text {
+        margin-top: -30px !important;
+      }
+    }
+    .back_home {
+      margin-top: -30px !important;
+    }
+    .benefits_tablet {
+      margin-top: 20px;
+    }
+    .new_card_list {
+      padding: 20px 10px !important;
+    }
+    .performers button {
+      margin-top: 22px;
+    }
+    .head_logo_tablet {
+      margin-right: 150px !important;
+    }
+    .hide_page_tablet {
+      display: none !important;
+    }
+    .head__media_modal{
+      width: 300px;
+      height: 50vh !important;
+      position: absolute !important;
+  }
+  .head_mobile_page {
+    display: none !important; 
+  }
+  .mobile_modal_head_page {
+    display: none !important;
+  }
+  .new_card{
+   height: 420px !important;
+  }
+  .head_mobile_page_item {
+    display: none !important;
+  }
+  .comments_group {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: start !important;
+  }
+  .user_info {
+    margin: 20px !important;
+  }
+  .reviews_buttons_desktop {
+    display: none;
+  }
+  .reviews_buttons_mobile {
+    display: block;
+  }
+  .new_card_3,
+  .new_card_4,
+  .new_card_6 {
+    margin-top: 30px !important;
+  }
+    .new_card_12 {
+      margin-top: 0 !important;
+    }
+    .new_card_9,
+    .new_card_10 {
+      margin: 30px 0 !important;
+    }
+    .new_card_11 {
+      margin: 0 !important;
+    }
+}
+}
+@media only screen and(max-width: 767px) {
+  body {
+    .header_blog {
+      padding: 0 0 30px !important;
+      .header_blog_sub_text {
+        margin-top: -10px !important;
+        font-size: 35px !important;
+        letter-spacing: 2px;
+        font-weight: 600 !important;
+      }
+    }
+    .last_news .last_news_mobile {
+      margin-bottom: 30px;
+    }
+    .updates_list .updates_btn {
+      margin-top: 20px;
+    }
+    .head__media_modal{ 
+      height: 94vh !important;
+    }
+    .head_mobile_page_sub {
+      margin-top: 50px !important;
+    }
+    .head_mobile_page_sub .head__singIn {
+      margin-left: 130px !important;
+    }
+    
+  .new_card{
+    height: 420px !important;
+   }
+   .head__main_block {
+     margin: 0 !important;
+   }
+   .comments_group {
+    display: flex;
+    align-items: flex-start !important;
+  }
+  .user_info {
+    margin: 20px !important;
+  }
+  .my_comment {
+    display: flex;
+    align-items: start !important;
+  }
+  .my_comment form {
+    flex-direction: column !important;
+  }
+  .my_comment form button {
+    position: relative !important;
+  }
+  .my_comment form textarea {
+    height: auto !important ;
+  }
+  .comments_group img,
+  .my_comment img {
+    width: 100% !important;
+  }
+  .comments_group .user_info {
+    margin-top: -10px !important;
+    margin-left: 0 !important;
+  }
+  .user_info .date_time {
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+  .user_info strong {
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .reviews_buttons_desktop {
+    display: none;
+  }
+  .reviews_buttons_mobile {
+    display: block;
+  }
+  .new_card_9,
+  .new_card_10,
+  .new_card_11 {
+    margin-bottom: 30px !important;
+  }
+  .new_card_4,
+  .new_card_6 {
+    margin-top: 0px !important;
+  }
+  }
+}
+
+
+@media only screen and(max-width: 567px) {
+  body {
+    header {
+      .mobile_row_title {
+        margin-top: 0 !important;
+      }
+      .header_sub_text p {
+        font-size: 35px !important;
+        letter-spacing: 2px;
+        padding-left: 10px;
+      }
+    }
+    .title_text {
+      text-align: center;
+    }
+    .head__singIn {
+      display: block !important;
+    }
+    .comments_group img,
+    .my_comment img {
+      width: 160% !important;
+    }
+    .user_info {
+      margin-left: 0 !important;
+    }
+    .my_comment textarea {
+      padding-right: 20px !important;
+    }
+    .my_comment button {
+      margin: 20px auto !important;
+    }
+    .last_news {
+      margin-top: -20px !important;
+    }
+  }
+}
+
+@media only screen and(max-width: 467px) {
+  body {
+    .user_info strong {
+      font-size: 16px !important;
+      width: 100px !important;
+    }
+    .user_info span {
+      font-size: 12px !important;
+    }
+    .info_page_user {
+      flex-wrap: wrap !important;
+    }
+    .comment_num_mobile {
+      margin-right: 20px !important;
+    }
+    .new_info_page_title,
+    .comments_box .title_text {
+      font-size: 20px !important;
+      line-height: 22px !important;
+    }
+    .header_sub_text p {
+      font-size: 25px !important;
+    }
+    .back_home {
+      padding: 20px 0 !important;
+
+      .back_home_text {
+        font-size: 18px !important;
+      }
+    }
+    .card_new_info_page .blog_img {
+      height: 200px !important;
+      object-fit: cover;
+    }
+    .my_comment form button {
+      margin-left: 40px !important;
+    }
+    form {
+      textarea {
+        resize: vertical !important;
+        overflow: auto !important;
+        border-radius: 10px !important;
+      }
+    }
+    
+  }
+}
+@media screen and (max-width: 368px) {
+  body {
+    .new_card_list {
+      padding: 20px 5px !important;
+    }
+  }
+}

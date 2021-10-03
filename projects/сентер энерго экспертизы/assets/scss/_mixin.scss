@@ -1,0 +1,44 @@
+@import 'font';
+
+@mixin display($align, $content) {
+    display: flex;
+    align-items: $align;
+    justify-content: $content;
+}
+
+@mixin display-diraction($align, $content) {
+    display: flex;
+    align-items: $align;
+    justify-content: $content;
+    flex-direction: column;
+}
+
+@mixin text($size, $font, $weight, $color) {
+    font-size: $size;
+    font-family: $font;
+    font-weight: $weight;
+    color: $color;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin bgc($bgc, $height) {
+    background-color: $bgc;
+    max-width: 1920px;
+    height: $height;
+    margin: 0 auto;
+}
+
+// @include Montserrat($font, $weight) {
+//     font-family: $font;
+//     font-weight: $weight;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @include Open-Sans($weight) {
+//     font-family: 'Open_Sans';
+//     font-weight: $weight;
+//     font-style: normal;
+//     font-display: swap;
+// }

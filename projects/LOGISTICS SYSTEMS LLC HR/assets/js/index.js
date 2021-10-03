@@ -1,0 +1,71 @@
+let faqItems = document.querySelectorAll('.faq-item');
+let select = document.querySelector('.select-item');
+let options = document.querySelectorAll('.option');
+let selectInp = document.getElementById('selectInp');
+let body = document.body;
+
+let selectIcon = select.parentElement.children[2]
+
+// window.onbeforeunload = function () {
+//     window.scrollTo(0, 0);
+//   }
+
+  $(document).ready(function(){
+    $(this).scrollTop(0);
+});
+
+faqItems.forEach(faq => {
+    faq.addEventListener('click', () => {
+        faq.classList.toggle('showFaqInfo');
+        console.dir(faq.children[0].classList.toggle('activeTitle'))
+    })
+});
+
+selectInp.addEventListener('click', () => {
+    select.classList.toggle('openOptions');
+  selectIcon.classList.toggle('rotateChevron');
+});
+
+options.forEach(option => {
+    option.addEventListener('click', () => {
+       let optionText =  option.firstElementChild.textContent
+
+       selectInp.value = optionText;
+       select.classList.remove('openOptions');
+       selectIcon.classList.remove('rotateChevron');
+    })
+});
+
+selectIcon.addEventListener('click', () => {
+    selectIcon.classList.toggle('rotateChevron');
+    select.classList.toggle('openOptions');
+})
+
+
+
+// player
+const player = new Plyr('#player');
+
+// mask phone
+$(document).ready(function() {
+    $("#phone").mask("+1 (999) 999-99-99");
+  });
+
+
+//   wow js
+var wow = new WOW(
+    {
+      boxClass:     'wow',      // animated element css class (default is wow)
+      animateClass: 'animated', // animation css class (default is animated)
+      offset:       0,          // distance to the element when triggering the animation (default is 0)
+      mobile:       false,       // trigger animations on mobile devices (default is true)
+      live:         true,       // act on asynchronously loaded content (default is true)
+      callback:     function(box) {
+        // the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+      },
+      scrollContainer: null,    // optional scroll container selector, otherwise use window,
+      resetAnimation: true,     // reset animation on end (default is true)
+    }
+  );
+  wow.init();

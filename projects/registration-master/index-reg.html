@@ -1,0 +1,125 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>Регистрация - Letcop</title>
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+</head>
+<body>
+    
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            
+            <div class="header__logo">
+               <a href="#">
+                    <img src="img/logo.svg" width="48px" height="50px" alt="letcop.uz">
+               </a>
+            </div>
+       
+        </div> <!-- container -->
+    </div> <!-- header -->
+    
+    <div class="form__box">
+        <h3 class="form__head" >            
+            Приветствуем Вас на платформе Letcop!
+        </h3>
+        <form action="" class="form" method="post">
+            <label for="name" class="name">Имя и Фамилия</label> <br>
+            <input type="text" minlength="5" maxlength="25" class="in__name" id="name" onchange="change__name()" placeholder="Артур Пендрагон"> 
+            <div id="name__span" class="opacNull err__span"><p>Минимальная длина 5 символов и допустимое значение русские буквы</p></div>
+            
+            <label for="email" class="email">E-mail</label> <br>
+            <input type="email" onchange="validateEmail()"  minlength="5" class="in__email" id="email" placeholder="excalibur@gmail.com" >
+            <span class="err__span" id="email__span"></span> <br>
+
+            <div class="country__form_block">
+                <div class="country__form_iteam">
+                    <div class="contry__form_btn">
+                        <span>Выберите вашу страну</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="country__form_list">
+                    </div>
+                </div>
+                <div id="typ__span" class="err__span opacNull">Выберите вашу страну</div>
+            </div>
+
+            <div class="typ" id="typ__div" onclick="change__radio()">
+                <div>
+                    <input type="radio" name="typ" id="zak" class="radio" >
+                    <span class="fake"></span>
+                    <label for="zak" class="radio__label" id="zak__text" onclick="change_radio_to_zak()">Я заказчик</label>    
+                </div>
+                <div class="isp">
+                    <input type="radio"  name="typ"  id="isp" class="radio" >
+                    <span class="fake"></span>
+                    <label for="isp" class="radio__label" id="isp__text" onclick="change_radio_to_isp()">Я исполнитель</label>
+                </div>
+                
+            </div>
+            <div id="typ__span" class="err__span opacNull">Вы не выбрали тип</div>
+            
+    
+                
+
+            <label for="login" class="login">Логин</label> <br>
+            <input type="text" minlength="3" maxlength="17" class="inp__login" id="login" onchange="change__login()" placeholder="Hamillioner" >
+            <div id="login__span" class="err__span opacNull">Минимальная длина Логина 3 символа и допустимое значение английские буквы</div>
+             
+            
+            <div class="pass">
+                <label for="password" class="password">Пароль</label> <button type="button" title="Ну ты тупой, однако. Нажимай уже!!!" onclick="view_gen_password()"   class="generate">Сгенерировать</button>
+            </div>
+             
+            <div class="inp__password">
+                <input type="password" id="password" placeholder="Не менее 8 символов" minlength="8" onchange="checkPassword()" >
+                <div class="icon" onclick="change_to_pass()"><i class="fa fa-eye-slash icon" id="icon" aria-hidden="true"></i> 
+                </div>
+            </div>
+            <div id="pass__span" class="err__span opacNull">Минимальная длина Пароля 8 символов</div>
+            
+            <label for="repassword" class="repassword">Повторите пароль</label> <br>
+            <div class="inp__password">
+                <input type="password" class="inp__repassword" id="repassword" minlength="8"  placeholder="Не менее 8 символов" onchange="checkPasswordMatch()" >
+                <div class="icon" onclick="change_to_repass()"><i class="fa fa-eye-slash icon" id="icont" aria-hidden="true"></i> 
+                </div> 
+            </div>
+            <div id="span__repassword" class="err__span opacNull">Убедитесь в правильности паролей</div>
+            
+            <div class="center">
+               <div class="btn btn-disabled" id="div_btn">
+                <button type="button" id="btn" onclick="btn_check ()"  class="btn__submit disabled">
+                   Зарегистрироваться
+                </button>
+                <div class="btn__div" id="btn__div">
+                        test
+                </div>
+                </div>
+            </div>
+            
+            <p class="soglas">
+                Нажимая кнопку "ЗАРЕГИСТРИРОВАТЬСЯ", Вы принимаете условия 
+                <a href="#" class="rule">
+                    Пользовательского соглашения
+                </a>
+            </p>
+            
+            <p class="auth"><a href="#">Авторизация</a></p>
+        </form>
+    </div>
+    
+    
+    <script src="js/main.js"></script>
+    
+
+</body>
+</html>

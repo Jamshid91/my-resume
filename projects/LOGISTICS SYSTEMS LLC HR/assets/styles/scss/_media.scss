@@ -1,0 +1,928 @@
+@media screen and(max-width: 1350px) {
+    .become-member {
+        .line_red {
+            display: none;
+        }
+    }
+}
+
+@media screen and(max-width: 1200px) {
+    .header {
+        &-title {
+            &__sup-text {
+                font-size: 16px;
+            }
+            &__text {
+                font-size: 50px;
+            }
+            .appStore__img,
+            .playStore__img {
+                    width: 150px;
+                    height: 45px;
+                    object-fit: cover;
+            }
+            &-hand {
+                .header-circle {
+                    top: -50px;
+                    right: -20px;
+    
+                    &__img {
+                        width: 561px;
+                        transition: .5s;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .our-advantages {
+        height: auto;
+        &-phone {
+            .back-phone {
+                width: 450px;
+            }
+            .front-phone {
+                width: 550px;
+            }
+            .triangle {
+                display: none;
+            }
+        }
+    }
+}
+
+
+// TABLET
+@media screen and(max-width: 992px) {
+    .header {      
+    .nav {
+        &-item {
+            &-email,
+            &-phone {
+                &__text {
+                    font-size: 15px;
+                }
+            }
+            &__button {
+                width: 150px;
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+    }
+        &-title {
+            .row {
+                margin-left: 20px;
+            }
+            &__sup-text {
+                font-size: 16px;
+            }
+            &__text {
+                font-size: 45px;
+                line-height: 50px;
+            }
+            &__button {
+                width: 170px;
+                height: 45px;
+                font-size: 14px;
+            }
+            &-hand {
+                .header-circle {
+                    top: -50px;
+                    right: -20px;
+    
+                    &__img {
+                        width: 500px;
+                        transition: .5s;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .our-advantages {
+        padding: 50px 0;
+        .row {
+            margin-left: 20px;
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &-phone {
+            position: relative;
+            height: 700px;
+            .back-circle {
+                width: 100%;
+            }
+            .back-phone {
+                top: 65px;
+                left: -20px;
+                width: 600px;
+            }
+            .front-phone {
+                top: 10px;
+                right: -100px;
+                width: 750px;
+            }
+        }
+        &__button {
+            width: 150px;
+            height: 45px;
+            font-size: 14px;
+        }
+
+    }
+
+    .our-service {
+        height: auto;
+        padding-top: 50px;
+    
+        .row {
+            margin-left: 20px;
+        }
+    
+        &__title {
+            font-size: 40px;
+            line-height: 50px;
+        }
+    
+        &-man {
+            margin-top: 50px;
+            margin-left: -50px;
+            .our-service__circle {
+                margin-top: 40px;
+            }
+            &__img {
+                position: absolute;
+                bottom: 0;
+                left: 50px;
+            }
+        }
+    
+        &-item {
+            margin-top: 100px;
+        }
+        &-list {
+            color: var(--white);
+            .check-circle {
+                margin-right: 15px;
+            }
+        }
+        &__button {
+            width: 150px;
+            height: 45px;
+            font-size: 14px;
+        }
+    }
+    
+    // How to be a member of our service
+    .become-member {
+        padding: 50px 0;
+        .row {
+            margin-left: 20px;
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &-item {
+            &-circle {
+            }
+            &__text {
+                font-size: 22px;
+                width: 100%;
+            }
+        }
+    }
+
+    // FAQ
+    .faq {
+        padding: 50px 0;
+        &__title {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &-macbook {
+            &__faq-img {
+                left: 10px;
+                top: -70px;
+                width: 150px;
+            }
+            &__macbook-img {
+                width: 350px;
+            }
+        }
+    }
+
+    // bidding-enhanced
+    .bidding-enhanced {
+        padding: 50px 0;
+        .row {
+            margin-left: 20px;
+        }
+        &-video {
+            width: 100%;
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &__text {
+        }
+        &-buttons button {
+            width: 150px;
+            height: 45px;
+            font-size: 14px;
+        }
+        
+        .btn_submit {
+            margin-left: 25px;
+        }
+    }
+}
+
+@media screen and(max-width: 768px) {
+    .header {
+        height: auto;
+    .nav {
+        &-item {
+            flex-wrap: wrap;
+            margin-top: 20px;
+            &-email,
+            &-phone {
+                &__text {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+        &-title {
+            margin-top: 50px;
+            .row {
+                margin-left: 0px;
+            }
+            &__sup-text {
+                font-size: 15px;
+            }
+            &__text {
+                font-size: 50px;
+                line-height: 50px;
+            }
+            &-store {
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                margin-top: 40px;
+                .googlePlay {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+            }
+            &-hand {
+                .header-circle {
+                    top: 0px;
+                    right: -50px;
+    
+                    &__img {
+                        width: 500px;
+                        transition: .5s;
+                    }
+                }
+                .front-phone {
+                    position: absolute;
+                    top: 0;
+                    left: -20px;
+                    z-index: -1;
+                }
+            }
+            &-hand__img {
+                width: 350px;
+                margin-left: -100px;
+            }
+        }
+    }
+
+    
+    .our-advantages {
+        .row {
+            margin-left: 0;
+        }
+        &__title {
+            font-size: 35px;
+        }
+        &-phone {
+            position: relative;
+            height: 600px;
+            .back-circle {
+                width: 100%;
+            }
+            .back-phone {
+                top: 65px;
+                left: -20px;
+                width: 500px;
+            }
+            .front-phone {
+                top: 10px;
+                right: -100px;
+                width: 650px;
+            }
+        }
+    }
+
+    
+    .our-service {
+        height: auto;
+        padding-top: 50px;
+    
+        .row {
+            margin-left: 0px;
+        }
+    
+        &__title {
+            font-size: 35px;
+            line-height: 50px;
+            width: 300px;
+        }
+    
+        &-man {
+            margin-top: 0px;
+            margin-left: -50px;
+            .our-service__circle {
+                margin-top: 40px;
+            }
+            &__img {
+                width: 300px;
+                position: absolute;
+                bottom: 0;
+                left: 0px;
+            }
+        }
+    
+        &-item {
+            margin-top: 50px;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+        }
+        &-list {
+            color: var(--white);
+            text-align: start;
+            .check-circle {
+                margin-right: 15px;
+            }
+        }
+        &__button {
+            width: 150px;
+            height: 45px;
+            font-size: 14px;
+        }
+    }
+
+    // How to be a member of our service
+    .become-member {
+        padding: 50px 0;
+        .row {
+            margin-left: 20px;
+        }
+        &__title {
+            font-size: 35px;
+        }
+        &-item {
+            &-circle {
+            }
+            &__text {
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+    }
+    
+    // FAQ
+    .faq {
+        .row {
+            margin-left: 20px;
+        }
+        padding: 50px 0;
+        &__title {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &-macbook {
+            &__faq-img {
+                left: 20px;
+                top: -70px;
+                width: 180px;
+            }
+            &__macbook-img {
+                width: 550px;
+            }
+        }
+    }
+
+    
+    // bidding-enhanced
+    .bidding-enhanced {
+        padding: 50px 0;
+        .row {
+            margin-left: 20px;
+        }
+        &_mobile {
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+        &-video {
+            width: 100%;
+            margin-top: 30px;
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &__text {
+        }
+        &-buttons button {
+            width: 150px;
+            height: 45px;
+            font-size: 14px;
+        }
+        
+        .btn_submit {
+            margin-left: 25px;
+        }
+    }
+}
+
+// MOBILE
+@media screen and(max-width: 576px) {
+    .mobile_fixed {
+    display: block;
+    }
+    .header {
+    .nav {
+        &-item {
+            &__button {
+                margin-top: 20px;
+            }
+        }
+    }
+        &-title {
+            margin-top: 50px;
+            .row {
+                margin-left: 0px;
+            }
+            &__sup-text {
+                font-size: 15px;
+                text-align: center;
+            }
+            &__text {
+                font-size: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+            &__button {
+              display: none;
+            }
+            &-store {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin-top: 30px;
+                .googlePlay {
+                    margin-left: 20px;
+                    margin-top: 0px;
+                }
+            }
+            &-hand {
+                text-align: center;
+                .header-circle {
+                    top: 50px;
+                    right: 50%;
+                    transform: translate(50%);
+    
+                    &__img {
+                        width: 500px;
+                        transition: .5s;
+                    }
+                }
+                .front-phone {
+                    display: none;
+                }
+            }
+            &-hand__img {
+                width: 400px;
+                margin: 0;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    
+    .our-advantages {
+        .row {
+            margin-left: 0;
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        height: auto;
+        &-list {
+            width: 100%;
+            height: auto;
+            margin-top: 60px;
+        }
+        &-phone {
+            position: relative;
+            height: 600px;
+            .back-circle {
+                width: 100%;
+                z-index: -3;
+            }
+            .back-phone {
+                top: 65px;
+                left: -90px;
+                width: 400px;
+                z-index: -2;
+            }
+            .front-phone {
+                top: 10px;
+                right: -80px;
+                width: 500px;
+                z-index: -1;
+            }
+        }
+        &__button {
+            display: none;
+        }
+    }
+
+    
+    .our-service {
+        height: auto;
+        padding: 50px 0;
+    
+        .row {
+            margin-left: 0px;
+        }
+    
+        &__title {
+            font-size: 35px;
+            line-height: 50px;
+            width: 300px;
+        }
+    
+        &-man {
+            margin-left: 0px;
+            .our-service__circle {
+                margin-top: 40px;
+                width: 100%;
+            }
+            &__img {
+                width: 300px;
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom: 4px solid red;
+            }
+        }
+    
+        &-item {
+            margin: 0 ;
+            padding: 0;
+        }
+        &-list {
+            font-size: 25px;
+            .check-circle {
+            }
+        }
+        &-list:first-child{
+            margin-left: 0px;
+        }
+        &__button {
+            display: none;
+        }
+    }
+
+    // How to be a member of our service
+    .become-member {
+            padding: 50px 0;
+            .row {
+                margin-left: 20px;
+            }
+            &__title {
+                font-size: 35px;
+            }
+            &-item {
+                flex-direction: row;
+                margin-left: -100px;
+                &-circle {
+                }
+                &__text {
+                    font-size: 20px;
+                    width: 50%;
+                    overflow-wrap: break-word;
+                    text-align: start;
+                    margin-left: 15px;
+                }
+            }
+    }
+    
+    // FAQ
+    .faq {
+        padding: 50px 0;
+        .row {
+            margin-left: 0;
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &-macbook {
+            &__faq-img {
+                left: -10px;
+                top: -70px;
+                width: 150px;
+            }
+            &__macbook-img {
+                width: 400px;
+            }
+        }
+    }
+ 
+    // bidding-enhanced
+    .bidding-enhanced {
+        padding: 50px 0;
+        .row {
+            margin-left: 0px;
+        }
+        &-video {
+            width: 100%;
+            margin-top: 30px;
+            .plyr__control--overlaid{
+                width: 50px;
+                height: 50px;
+                font-size: 50px;
+            }
+            .plyr__control svg {
+                width: var(--plyr-control-icon-size, 20px);
+            }
+        }
+        &__title {
+            font-size: 35px;
+        }
+        &-buttons button {
+            width: 150px;
+            height: 45px;
+            font-size: 14px;
+            margin: 0;
+        }
+        .btn_joun {
+            display: none;
+        }
+        
+        .btn_submit {
+            margin-left: 0px;
+            margin-top: 25px;
+        }
+    }
+
+    // footer
+    .footer {
+        padding: 50px 0;
+        &-logo__img {
+            width: 100px;
+        }
+        &-text {
+            margin-top: 16px;
+            font-size: 15px;
+        }
+    }
+
+    // Modal
+
+.modal {
+    &-dialog {
+        display: flex;
+        align-items: center;
+        justify-content: center;     
+    }
+    &-content {
+    width: 320px;
+    height: 500px;
+    }
+}
+    
+}
+
+
+@media screen and(max-width: 420px) {
+    .header {
+        .nav {
+            .email-icon,
+                .phone-icon {
+                    margin-right: 4px;
+                }
+            &-item {
+                &__button {
+                    margin-top: 20px;
+                }
+            }
+            
+            &-email {
+                &__text {
+                    letter-spacing: 0px;
+                }
+            }
+        }
+        &-title {
+            &__sup-text {
+                font-size: 15px;
+                margin-bottom: 0;
+            }
+            &__text {
+                font-size: 42px;
+                line-height: 50px;
+                // margin-top: -30px !important;
+            }
+            &-store {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                margin-top: 30px;
+                .googlePlay {
+                    margin-left: 20px;
+                    margin-top: 0px;
+                }
+            }
+            &-hand {
+                text-align: center;
+                .header-circle {
+                    top: 50px;
+                    right: 50%;
+                    transform: translate(50%);
+    
+                    &__img {
+                        width: 500px;
+                        transition: .5s;
+                    }
+                }
+                .front-phone {
+                    display: none;
+                }
+            }
+            &-hand__img {
+                width: 350px;
+                margin: 0;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .our-advantages {
+        &__title {
+            font-size: 30px;
+            line-height: 45px;
+        }
+        &-phone {
+            height: 450px;
+            .back-phone {
+                width: 300px;
+                left: -60px;
+            }
+            .front-phone {
+                width: 400px;
+                left: 10px;
+            }
+            .back-circle {
+                width: 120%;
+                top: 0;
+            }
+        }
+    }
+    
+    
+    .our-service {
+        height: auto;
+        padding: 50px 0;
+    
+        .row {
+            margin-left: 0px;
+        }
+    
+        &__title {
+            font-size: 30px;
+            line-height: 45px;
+            width: 300px;
+        }
+    
+        &-man {
+            margin-left: 0px;
+            .our-service__circle {
+                margin-top: 40px;
+                width: 100%;
+            }
+            &__img {
+                width: 300px;
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom: 4px solid red;
+            }
+        }
+    
+        &-item {
+            margin: 0;
+            margin-top: 100px;
+        }
+        &-list {
+            font-size: 20px;
+            word-wrap: break-word;
+            .check-circle {
+                margin-right: 10px;
+            }
+        }
+        &__button {
+            display: none;
+        }
+    }
+
+    // How to be a member of our service
+    .become-member {
+        padding: 50px 0;
+        .row {
+            margin-left: 0px;
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 45px;
+        }
+        &-item {
+            flex-direction: row;
+            margin-top: 50px;
+            margin-left: -10px;
+            &-circle {
+            }
+            &__text {
+                font-size: 20px;
+                width: 80%;
+            }
+        }
+        
+        .plyr__control--overlaid{
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+        .plyr__control svg {
+            width: var(--plyr-control-icon-size, 18px);
+        }
+    }
+        
+    // FAQ
+    .faq {
+        padding: 0;
+        padding-bottom: 50px;
+        overflow: hidden;
+        &__title {
+            font-size: 35px;
+            line-height: 50px;
+            text-align: center;
+        }
+        &-macbook {
+            &__faq-img {
+                left: -30px;
+                top: -70px;
+                width: 150px;
+            }
+            &__macbook-img {
+                width: 340px;
+            }
+        }
+        
+    &-item {
+
+        &-title {
+            padding: 0 10px;
+            &__text {
+                font-size: 17px;
+            }
+            .fa-file-search {
+                font-size: 20px;         
+            }
+        }
+        &-info {
+            padding: 10px;
+            &__text {
+                font-size: 16px;   
+            }
+        }
+    }
+
+    }
+}

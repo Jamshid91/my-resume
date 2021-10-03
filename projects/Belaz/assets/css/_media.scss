@@ -1,0 +1,327 @@
+@media screen and (max-width: 992px) {
+  body {
+    .receive {
+      .text-sup {
+        h1 {
+          text-align: center;
+        }
+      }
+    }
+
+    // ==========
+
+    .main {
+      .main-icon {
+        margin-bottom: 2rem;
+      }
+    }
+
+    // ==========
+
+    .detail {
+
+      button {
+        margin-top: 3rem;
+      }
+    }
+
+    // ======
+
+    .warranty {
+      .control {
+        margin-top: 3rem;
+      }
+
+      .back-page {
+        position: absolute;
+        left: 2rem;
+        margin-left: -2.5rem;
+      }
+    }
+
+    // ==========
+
+    .question {
+      .text {
+        padding-bottom: 4rem;
+      }
+    }
+
+    // =========
+
+    .warehouse {
+      .img-sub {
+        margin-top: 2.5rem;
+      }
+    }
+
+    // ===========
+
+    footer {
+      .num {
+        display: flex;
+        margin-top: 2rem;
+
+        p {
+          padding-top: 0.2rem;
+          font-size: 1em;
+        }
+
+        span {
+          padding-left: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 776px) {
+  body {
+    nav {
+      .clock {
+        display: flex;
+        justify-content: space-around;
+
+
+        p {
+          padding-top: 0.7rem;
+          padding-left: 0.5rem;
+        }
+
+        span {
+          padding-bottom: 2rem;
+          padding-top: 0.7rem;
+        }
+      }
+    }
+
+    // ==============
+
+    header {
+
+      .orginal {
+        font-size: 1em;
+        background-color: red;
+        color: red;
+
+        h1 {
+          font-size: 1em;
+        }
+      }
+    }
+
+    // ===============
+
+    .detail {
+      .num {
+        margin-top: 3rem;
+      }
+    }
+
+    // ==========
+
+    .warranty {
+      .back-page {
+        margin-left: -3.4rem;
+      }
+
+
+
+      .control {
+        margin-top: 4rem;
+      }
+    }
+
+    // ============
+
+    .discounts {
+      .icon-sub {
+        margin-top: 3rem;
+      }
+    }
+
+    // ===========
+
+    .delivery {
+      .icon3 {
+        // margin-top: 3rem;
+      }
+    }
+
+    // ==========
+
+    .warehouse {
+      .img-m {
+        // margin-top: 3rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    // ===========
+
+    .team {
+      .img-sub {
+        margin-top: 3rem;
+      }
+    }
+
+    // ============
+
+    .consultation {
+      button {
+        margin-top: 3rem;
+      }
+    }
+
+    // ===========
+
+    footer {
+      .logo-f {
+        width: 100%;
+      }
+
+      .num {
+        p {
+          padding-top: 2rem;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    header {
+      .orginal {
+        padding-left: 20px;
+
+        .text-org {
+          font-size: 1.8em;
+          padding-top: 3rem;
+          margin-left: -4rem;
+        }
+
+        .text-sub-org {
+          font-size: 1.2em;
+          margin-top: -3rem;
+          margin-left: -4rem;
+          margin-bottom: -6rem;
+        }
+
+        .icon-header {
+          margin-left: -6rem;
+        }
+      }
+    }
+
+    // ========
+
+    .receive {
+      padding: 0;
+
+      .text-rec-sup {
+        padding-top: 1rem;
+        margin-top: -7rem;
+      }
+
+      .text-email {
+        font-size: 1.5em;
+        text-align: center;
+
+      }
+
+      .clock-email {
+        width: 10%;
+      }
+
+      button {
+        margin-top: 2rem;
+      }
+    }
+
+    // ===========
+
+    .warranty {
+      .back-page {
+        margin-left: -0.5rem;
+      }
+
+      .lits {
+        margin-bottom: 3rem;
+      }
+    }
+
+    // ===========
+
+    .question {
+      .text-info-box {
+        margin-left: 5rem;
+        color: #fff;
+      }
+
+      .box {
+        margin-left: -6rem;
+      }
+
+      img {
+        margin-top: 4rem;
+      }
+    }
+
+    // =========
+
+    footer {
+
+      .phone-num {
+        padding-top: 2.2rem;
+        font-size: 0.85em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    .question {
+      .text-info-box {
+        margin-left: 5rem;
+        color: #fff;
+      }
+
+      .box {
+        margin-left: -6rem;
+      }
+
+      .box1 {
+        margin-top: 1rem;
+      }
+
+      .box2 {
+        margin-top: 3rem;
+      }
+
+      .box3 {
+        margin-top: 5rem;
+      }
+
+      .box4 {
+        margin-top: 8rem;
+      }
+
+      .box5 {
+        margin-top: 10rem;
+      }
+
+      img {
+        margin-top: 4rem;
+      }
+    }
+
+    .warranty {
+      .back-page {
+        margin-left: -3.3rem;
+      }
+    }
+  }
+}

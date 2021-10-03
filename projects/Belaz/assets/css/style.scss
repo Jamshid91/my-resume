@@ -1,0 +1,572 @@
+@mixin background($src) {
+  background-image: url($src);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html {
+  font-size: 10px;
+
+  body {
+
+    font-size: 16px;
+
+    .text-sup {
+      h1 {
+        font-size: 2.25em;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.25em;
+        padding-bottom: 10rem;
+      }
+    }
+
+    button {
+      background-color: #1669b3;
+      text-transform: uppercase;
+      color: #fff;
+      border: none;
+      outline: none;
+      transition: all 0.8s ease;
+
+      &:hover {
+        background-color: #f7b516;
+        outline: none;
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    nav {
+      background-color: #191919;
+      color: #fff;
+      padding: 2.5rem 0;
+
+      button {
+        padding: 2rem 0;
+        font-size: 0.7em;
+      }
+    }
+
+    header {
+      @include background('../images/header-bgc.png');
+
+      .orginal {
+        background-color: #f7b516;
+        padding-left: 10rem;
+        padding-bottom: 5rem;
+        color: #000;
+
+        h1 {
+          font-size: 2.5em;
+          font-weight: 800;
+          text-transform: uppercase;
+          padding-top: 10rem;
+          padding-bottom: 6rem;
+          padding-right: 12rem;
+        }
+
+        h2 {
+          font-size: 1.56em;
+          padding-bottom: 10rem;
+        }
+
+        .icon-header {
+          margin-bottom: 5rem;
+
+          p {
+            padding-left: 2rem;
+            font-size: 1.125em;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    // ============== END header ==============
+
+    .receive {
+      @include background('../images/receive.png');
+      color: #000;
+      padding: 10rem 0;
+
+      h1 {
+        padding: 6rem;
+        font-size: 1.85em;
+        font-weight: 700;
+        text-align: right;
+      }
+
+      p {
+        text-align: right;
+        padding-right: 1rem;
+        font-size: 0.85em;
+      }
+
+      input {
+        height: 7rem;
+        background-color: #f2f2f2;
+        border: none;
+        outline: none;
+        padding-left: 3rem;
+        font-size: 0.75em;
+        margin-bottom: 3rem;
+
+        &:focus {
+          border: 1px solid #1669b3;
+        }
+
+
+      }
+
+      ::placeholder {
+        color: #818181;
+        text-transform: uppercase;
+      }
+
+      .inp {
+        margin-left: 2rem;
+      }
+
+      i {
+        width: 8rem;
+        height: 7rem;
+        background-color: #f2f2f2;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        color: #818181;
+      }
+
+      button {
+        padding: 3rem 0;
+        text-transform: uppercase;
+        font-size: 1.13em;
+        font-weight: 700;
+      }
+
+    }
+
+    // ============ END .receive ==========
+
+    .main {
+      background-color: #08243e;
+      color: #fff;
+      padding: 10rem 0;
+
+      .text-up {
+        padding-top: 3rem;
+        padding-bottom: 10rem;
+        font-size: 1.25em;
+      }
+
+      p {
+        padding-top: 5rem;
+
+      }
+    }
+
+    // ============= END .main ============
+
+    .detail {
+      @include background('../images/details.png');
+      color: #fff;
+      padding: 10rem 0;
+
+      .text-sup {
+        h1 {
+          padding-bottom: 4rem;
+        }
+
+        p {
+          padding-bottom: 6rem;
+        }
+      }
+
+      input {
+        padding: 2.5rem;
+        outline: none;
+
+        &:focus {
+          border: 1px solid #f7b516;
+        }
+      }
+
+      ::placeholder {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        color: #191919 j;
+      }
+
+      button {
+        padding: 2.5rem;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        font-weight: 500;
+        background-color: #f7b516;
+        outline: none;
+
+        &:hover {
+          background-color: #1669b3;
+        }
+      }
+
+      .text1 {
+        p {
+          font-size: 0.875em;
+          padding-top: 6rem;
+        }
+      }
+
+      .text2 {
+        p {
+          font-size: 0.875em;
+          padding-bottom: 2rem;
+          padding-top: 1rem;
+        }
+      }
+
+      span {
+        font-size: 1.875em;
+        font-weight: 700;
+      }
+    }
+
+    // =============== END .detail ==============
+
+    .warranty {
+      padding: 10rem 0;
+      color: #000;
+
+      h1 {
+        padding-bottom: 9.5rem;
+      }
+
+      p {
+        font-size: 1.25em;
+        padding: 4rem 0;
+      }
+
+      a {
+        color: #000;
+        font-size: 1.25em;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      img {
+        transition: all 1s ease;
+
+        // &:hover {
+        //   transform: scale(1.15);
+        //   display: block;
+        // }
+      }
+
+      .back-page {
+        position: absolute;
+        top: 0;
+        left: calc(100%/5);
+
+        &:hover {
+          display: none;
+        }
+      }
+    }
+
+    // ==================== END .warranty ===========
+
+    .discounts {
+      background-color: #08243e;
+      padding: 10rem 0;
+      color: #fff;
+
+      h1 {
+        padding-bottom: 10rem;
+      }
+
+      p {
+        padding-top: 4rem;
+        font-size: 1.15em;
+      }
+
+    }
+
+    // ================= END .discounts =============
+
+    .question {
+      padding: 10rem 0;
+      background-color: #0b3554;
+      color: #fff;
+
+      h1 {
+        padding-bottom: 4rem;
+      }
+
+      p {
+        padding-bottom: 10rem;
+      }
+
+      ol {
+        padding: 0 0 5.5rem 1.5rem;
+
+        li {
+          padding-bottom: 4.5rem;
+
+        }
+
+        .hidden {
+          display: none;
+        }
+
+        .box {
+          width: 33rem;
+          height: 16rem;
+          background-color: #fff;
+          clip-path: polygon(12% 0, 16% 8%, 100% 8%, 100% 100%, 0 100%, 0 8%, 8% 8%);
+          color: #000;
+          padding: 2.2rem;
+          position: absolute;
+          left: 5rem;
+        }
+
+        .box1 {
+          top: 2rem;
+        }
+
+        .box2 {
+          top: 9rem;
+        }
+
+        .box3 {
+          top: 16rem;
+        }
+
+        .box4 {
+          top: 23rem;
+        }
+
+        .box5 {
+          top: 30rem;
+        }
+
+      }
+
+      a {
+        color: #fff;
+        padding-left: 2.5rem;
+        cursor: pointer;
+
+        &:hover {
+          color: #1669b3;
+          text-decoration: none;
+        }
+
+      }
+
+      .text {
+        margin-top: -6.5rem;
+
+        .fa {
+          font-weight: 100;
+          padding: 0;
+        }
+      }
+    }
+
+    // ============== END .question ================
+
+    .delivery {
+      padding: 10rem 0;
+      color: #000;
+
+      .text-sup {
+        h1 {
+          padding-bottom: 3rem;
+        }
+
+        p {
+          padding-bottom: 10rem;
+        }
+      }
+
+      .icon {
+        p {
+          font-size: 1.25em;
+          padding-top: 5rem;
+        }
+
+      }
+    }
+
+    // ================ END .delivery ============
+
+    .warehouse {
+      background-color: #0b3554;
+      padding: 10rem 0;
+      color: #fff;
+
+      h1 {
+        padding-bottom: 3.5rem;
+      }
+
+      img {
+        transition: all 1s ease;
+
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+    }
+
+    // ================ END .warehouse =============
+
+    .team {
+      padding: 10rem 0;
+      color: #000;
+
+      h1 {
+        padding-bottom: 10rem;
+      }
+
+      p {
+        padding-top: 4rem;
+        font-size: 1.15em;
+      }
+    }
+
+    // ============ END .team ============
+
+    .consultation {
+      @include background('../images/consultation.png');
+      padding: 10rem 0;
+      color: #fff;
+
+      h1 {
+        font-size: 1.85em;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 0.85em;
+        padding-top: 6.5rem;
+      }
+
+      span {
+        font-size: 1.82em;
+        font-weight: 700;
+      }
+
+      input {
+        background-color: #f2f2f2;
+        border: none;
+        outline: none;
+        padding-left: 2.5rem;
+        box-sizing: border-box;
+
+        &:focus {
+          border: 1px solid #f7b516;
+          box-sizing: border-box;
+        }
+      }
+
+      ::placeholder {
+        color: #818181;
+        text-transform: uppercase;
+        font-size: 0.8em;
+      }
+
+
+      i {
+        width: 8rem;
+        height: 7rem;
+        background-color: #f2f2f2;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        color: #818181;
+        border: none;
+      }
+
+      button {
+        background-color: #f7b516;
+        padding: 2.2rem 0;
+        font-size: 1.06em;
+        outline: none;
+
+        &:hover {
+          background-color: #1669b3;
+        }
+
+      }
+
+      .in-btn {
+        margin-top: 6rem;
+      }
+    }
+
+    // ================ END .consultation ======================
+
+    .office {
+      @include background('../images/office.png');
+      padding: 10rem 0;
+
+      h1 {
+        font-size: 1.85em;
+        font-weight: 700;
+        padding-bottom: 10rem;
+      }
+
+      p {
+        font-size: 1.15em;
+        padding-bottom: 3rem;
+      }
+
+      span {
+        font-size: 1.5em;
+        font-weight: 700;
+      }
+    }
+
+    // ===================== END .office ==============
+
+    footer {
+      background-color: #191919;
+      padding: 4rem 0;
+      color: #fff;
+
+      .fa {
+        color: #ff463e;
+      }
+
+      p {
+        font-size: 0.75em;
+        padding-left: 3rem;
+      }
+
+      span {
+        font-size: 1.15em;
+        font-weight: 700;
+      }
+
+      .text-p {
+        padding-top: 1.4rem;
+      }
+
+      .logo-last {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+@import 'media';

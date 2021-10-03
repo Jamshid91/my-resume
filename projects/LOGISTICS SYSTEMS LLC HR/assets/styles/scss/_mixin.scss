@@ -1,0 +1,25 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-column($align, $content) {
+    display: flex;
+    align-items: $align;
+    justify-content: $content;
+    flex-direction: column;
+}
+
+@mixin font($weight) {
+    font-family: 'Oswald';
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+}

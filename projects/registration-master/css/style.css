@@ -1,0 +1,717 @@
+body {
+    width: 1366px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    color: #d9d9e5;
+    font-weight: 400;
+    
+    background: url(../img/back.jpg) no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+a, p, h3, button, label, input{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    border: none;
+}
+
+.opacNull {
+    /*opacity: 0;*/
+    display: none;
+    height: 10px;
+}
+
+.opacAct {
+    /*opacity: 1;*/
+    display: block;
+    margin-bottom: 10px;
+}
+
+.err__span {
+    color: #ff8cb2;
+    
+}
+
+/* HEADER */
+/*---------------------------------*/
+
+.header {
+    padding: 10px 100px;
+    position: relative;
+}
+
+.container {
+    max-width: 100%;
+    text-align: center;
+    height: 40px; /*50*/
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    
+    font-size: 16px;
+}
+
+.header__logo {
+    margin: 0 auto;
+}
+
+/* FORM-box */
+/*---------------------------------------*/
+
+.form__box {
+    width: 320px;
+    padding: 20px; /*25px*/
+    padding-bottom: 10px;
+    margin: 5px auto;
+    
+    background-color: #3a3889;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #174691;  /*rgba(40,140,255,1)   #288CFF*/
+
+}
+
+.form__head {
+    padding-bottom: 15px;
+    
+    text-align: center;   
+    font-size: 15px;
+    font-weight: 400;
+    
+    border-bottom: 1px solid #0f0e40;
+}
+
+/* FORM */
+/*---------------------------------------*/
+
+.form {
+    margin-top: 15px; /*20px*/
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.form label {
+    margin-left: 10px;
+    font-weight: 400;
+}
+.country__form_iteam{
+    width: 100%;
+    position: relative;
+}
+.active__list{
+    border-radius: 15px 15px 0 0 !important;
+}
+.active__list i{
+    transform: rotate(-180deg);
+}
+.country__form_list{
+    padding: 5px 0;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #0F0F41;
+    height: 187px;
+    z-index: 99;
+    border-radius: 0 0 10px 10px;
+    overflow-y: scroll;
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.3);
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.country__form_list::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.country__form_list::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Handle */
+.country__form_list::-webkit-scrollbar-thumb {
+  background-color: #00CF4D;
+  border-radius: 10px;
+}
+.country__list_iteam{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    transition: 0.3s;
+    text-align: center;
+    user-select: none;
+}
+.country__list_iteam:hover{
+    background-color: #3A3889;
+}
+.contry__form_btn{
+    border-radius: 20px;
+    background-color: #0F0F41;
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.contry__form_btn i{
+    transition: 0.3s;
+}
+.active__sublist{
+    opacity: 1;
+    top: 23px;
+    visibility: visible;
+}
+.form input {
+    width: 100%;
+    margin: 10px 0 5px;
+    padding: 4px 10px;
+    
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 60px;
+    background-color: #0F0F41;
+}
+
+form input::placeholder {
+    color: #aaa;
+}
+
+.in__name {
+    font-weight: 500;
+}
+
+
+/* Тип (исполнитель или заказчик) */
+
+.typ {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radio {
+    cursor: pointer;
+    display: none;
+}
+
+.fake {
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.fake::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #00cf4d;
+    opacity: 0;
+    transition: .2s;
+    border-radius: 50%;
+}
+
+.radio:checked + .fake::before {
+    opacity: 1;
+}
+
+.radio__label {
+    cursor: pointer;
+}
+
+.radio__label:checked {
+    color: #00cf4d;
+}
+
+/* Заказчик */
+
+#zak {
+    width: 12px;
+    margin: 0;
+}
+
+#zak__text {
+    margin-left: 5px;
+    
+    transition: all .2s ease;
+}
+
+#zak__text:hover {
+    color: #00cf4d;
+    text-shadow: 0 0 10px rgba(0,207,77,1);
+    text-decoration: underline;
+}
+
+/* Исполнитель */
+
+.isp {
+    margin-right: 45px;
+    align-items: center;
+}
+
+#isp {
+    width: 12px;
+    margin: 0;
+}
+
+#isp__text {
+    margin: 5px;
+    
+    transition: all .2s ease;
+}
+
+#isp__text:hover {
+    color: #00cf4d;
+    text-shadow: 0 0 10px rgba(0,207,77,1);
+    text-decoration: underline;
+}
+
+
+/* Пароль */
+
+.pass {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.generate {
+    font-size: 11px;
+    font-weight: 400;
+    color: #8381ef; /*#8381ef*/
+    background-color: #3a3889;
+    cursor: pointer;
+    
+    text-decoration: underline;
+    transition: all .2s ease;
+}
+
+.generate:hover {
+
+    color: #00cf4d;
+    text-shadow: 0 0 10px rgba(0,207,77,1);
+/*
+    text-shadow: 0 0 5px rgba(40,140,255,1);  /*rgba(40,140,255,1)*/
+
+}
+
+
+/*color: #00cf4d;
+    text-shadow: 0 0 10px rgba(0,207,77,1);*/
+
+
+/* Глазок */
+.inp__password {
+    position: relative;
+}
+.icon {
+    position: absolute;
+    top: 6.5px;
+    right: 7px;
+    z-index: 1;
+    
+    font-size: 16px;
+    font-weight: 500;
+    color: #3a3889;
+    cursor: pointer;
+}
+
+inp__repassword {
+    transition: border-width .5s linear;
+}
+
+/* Button */
+.center {
+    display: flex;
+    justify-content: center;
+    
+    text-align: center;
+    
+    
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 200px;
+    height: 27px;
+    
+    
+    cursor: pointer;
+    background-color: #0F0F41;
+    border-radius: 25px;
+    
+    transition: all .2s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: -5px;
+}
+.country__form_block{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.country__form_block .err__span{
+    margin-top: 8px;
+}
+.filled:hover {
+    box-shadow: 0 0 15px #00cf4d;   /*rgba(40,140,255,1)*/
+}
+
+.btn__submit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 27px;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    background-color: transparent;
+    
+}
+
+.disabled, .btn-disabled {
+    cursor: context-menu;
+}
+
+.btn__div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 100%;
+    font-size: 0;
+    transform: translate(0,-50%);
+    background-color: #00cf4d;
+    
+}
+
+/* form__end */
+
+.soglas {
+    margin-top: -10px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.rule {
+    text-decoration: underline;
+}
+
+.auth {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    text-align: center;
+    color: #00CF4D;
+    transition: all .2s ease;
+}
+
+.auth:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 10px rgba(0,207,77,1);
+}
+
+@media (max-width: 4024px) {
+    .header {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .header__logo a img {
+        width: 78px;
+        height: 80px;
+    }
+    
+    .form__box {
+        width: 450px;
+    }
+    
+    .form__head {
+        font-size: 22px;
+    }
+    
+    .form {
+        font-size: 20px;
+    }
+    
+    .form label {
+        margin-left: 20px;
+    }
+    
+    .form input {
+        padding: 8px 25px;
+        font-size: 20px;
+    }
+    
+    .generate {
+        font-size: 17px;
+    }
+    
+    .icon {
+        top: 9.8px;
+        right: 13px;
+    }
+    
+    .btn {
+        width: 280px;
+        height: 40px;
+    }
+    
+    .btn__submit {
+        width: 280px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .soglas {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 2000px) {
+    .header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .header__logo a img {
+        width: 68px;
+        height: 70px;
+    }
+    
+    .form__box {
+        width: 400px;
+    }
+    
+    .form__head {
+        font-size: 19px;
+    }
+    
+    .form {
+        font-size: 17px;
+    }
+    
+    .form label {
+        margin-left: 15px;
+    }
+    
+    .form input {
+        font-size: 17px;
+        padding: 8px 19px;
+    }
+    
+    .generate {
+        font-size: 15px;
+    }
+    
+    .icon {
+        top: 9px;
+        right: 10px;
+    }
+    
+    .btn {
+        width: 250px;
+        height: 35px;
+    }
+    
+    .btn__submit {
+        width: 250px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .soglas {
+        font-size: 13px;
+    }
+}
+
+
+@media(max-width: 1600px) {
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .header__logo a img {
+        width: 58px;
+        height: 60px;
+    }
+    
+    .form__box {
+        width: 370px;
+    }
+    
+    .form__head {
+        font-size: 17px;
+    }
+    
+    .form {
+        font-size: 15px;
+    }
+    
+    .form label {
+        margin-left: 10px;
+    }
+    
+    .form input {
+        font-size: 15px;
+        padding: 6px 10px;
+    }
+    
+    .generate {
+        font-size: 13px;
+    }
+    
+    .icon {
+        top: 8px;
+        right: 8px;
+    }
+    
+    .btn {
+        width: 230px;
+        height: 30px;
+    }
+    
+    .btn__submit {
+        width: 230px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .soglas {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .header__logo a img {
+        width: 48px;
+        height: 50px;
+    }
+    
+    .form__box {
+        width: 320px;
+    }
+    
+    .form__head {
+        font-size: 15px;
+    }
+    
+    .form {
+        font-size: 13px;
+    }
+    
+    .form label {
+        margin-left: 5px;
+    }
+    
+    .form input {
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+    
+    .generate {
+        font-size: 11px;
+    }
+    
+    .icon {
+        top: 6.5px;
+        right: 7px;
+    }
+    
+    .btn {
+        width: 200px;
+        height: 27px;
+    }
+    
+    .btn__submit {
+        font-size: 12px;
+    }
+    
+    .soglas {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 740px) {
+    .header {
+        padding: 15px 50px;
+    }
+    
+    .form__box {
+        width: 300px;
+    }
+}
+
+@media (max-width: 650px) {        
+    .form__box {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 440px) {
+    .header {
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 410px) {
+    .form__box {
+        width: 260px;
+    }
+    
+    .isp {
+        margin-right: 5px;
+    }
+}
+
+/* Изменение цвета выделения на старнице  */
+::selection {background: #00CF4D; color:#fff;}
+::-moz-selection {background: #00CF4D; color:#fff;}
+::-webkit-selection {background: #00CF4D; color:#fff;}
+

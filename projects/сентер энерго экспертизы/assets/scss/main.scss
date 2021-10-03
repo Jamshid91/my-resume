@@ -1,0 +1,1110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import 'mixin';
+@import 'font';
+@import 'color';
+
+
+
+body {
+    position: relative;
+}
+
+
+.container {
+    max-width: 1224px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+}
+textarea::-webkit-scrollbar-track{
+     box-shadow: inset 0 0 5px $color-grey-light; 
+  border-radius: 5px;
+}
+textarea::-webkit-scrollbar-thumb{
+     background: $color-green; 
+  border-radius: 10px;
+}
+
+    
+.mobile_menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    background-color: $color-blue;
+    padding: 50px 25px;
+    right: -600px;
+    transition: .5s;
+    &_item {
+        margin-top: 50px;
+    }
+    &_list {
+        list-style: none;
+        text-align: center;
+        margin-top: 15px;
+        a {
+            text-decoration: none;
+            @include text(35px, 'Montserrat', 500, $color-white);
+        }
+    }
+    &_hat {
+       position: relative;
+       .mobile_menu_closeBtn {
+           position: absolute;
+           right: 10px;
+           top: -20px;
+           color: $color-denger;
+       }
+    }
+    .mobile_menu_contact {
+        text-align: center;
+        margin-top: 60px;
+        .nav_mobile_contact_num {
+            @include text(28px, 'Montserrat', 500, $color-white);
+        }
+        .nav_mobile_contact_text {
+            @include text(22px, 'Montserrat', 500, $color-green);
+        }
+    }
+}
+.hideMenu {
+    right: 0 !important;
+}
+
+    .title_text {
+        text-align: center;
+        h2 {
+            @include text(48px, 'Open_Sans', 400, $color-black);
+            line-height: 67.2px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    }
+
+    header {
+        @include bgc($color-white, auto);
+        position: relative;
+        padding-top: 30px;
+        overflow: hidden;
+        z-index: 0;
+        .nav_desctop {
+            width: 100%;
+            height: 52px;
+
+            &_logo_svg  {
+                width: 155px;
+            }
+
+            &_item {
+                margin: 0;
+                padding: 0;
+                @include display(center, space-between);
+            }
+                &_list {
+                    list-style: none;
+                    a {
+                        text-decoration: none;
+                        @include text(20px, 'Montserrat', 500, $color-black);
+                        position: relative;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: -10px;
+                            width: 0;
+                            height: 3px;
+                            background-color: $color-green;
+                            transition: .3s;
+                        }
+                        &:hover::before {
+                            width: 100%;
+                        }
+                    }
+                    &:nth-child(3) a {
+                        color: $color-white
+                    }
+                    &:nth-child(4) a {
+                        color: $color-white
+                    }
+                    &:nth-child(5) a {
+                        color: $color-white
+                    }
+                    
+                }
+            &_contact {
+                    text-decoration: none;
+                    @include text(18px, 'Montserrat', 500, $color-white);
+            }
+            &_contact_text {
+                @include text(18px, 'Montserrat', 500, $color-blue);
+            }
+        }
+
+        .nav_mobile {
+            &_contact_num {
+                text-decoration: none;
+                @include text(16px, 'Montserrat', 500, $color-white);
+            }
+            &_contact_text {
+                @include text(16px, 'Montserrat', 500, $color-green);
+            }
+
+            .menu_burger {
+                height: 25px;
+                cursor: pointer;
+                &_item {
+                   height: 100%;
+                    @include display-diraction(flex-end, space-between);
+                    span {
+                        display: block;
+                        width: 45px;
+                        height: 4px;
+                        background-color: $color-blue;
+
+                        &:nth-child(2) {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+            .header_title {
+                margin-top: 148px;
+                text-align: center;
+                &_text {
+                    @include text(48px, 'Open_Sans', 500, $color-black);
+                }
+                &_text_sub {
+                    @include text(24px, 'Open_Sans', 500, $color-black);
+                    margin-top: 20px; 
+                }
+            }
+
+                .header_form_consultation {
+                    margin-top: 40px;
+                    width: 100%;
+
+                    &_input {
+                        width: 280px;
+                        height: 62px;
+                        padding-left: 20px;
+                        @include text(18px, 'Montserrat', 500, $color-black);
+                        outline: none;
+                        border: 1px solid grey;
+                    }
+                    &_btn {
+                        width: 311px;
+                        height: 62px;
+                        background-color: $color-green;
+                        border: none;
+                        outline: none;
+                        @include text(18px, 'Montserrat', 500, $color-white);
+                        border: 2px solid $color-green;
+                        transition: .5s;
+
+                        &:hover {
+                            background-color: $color-green-black;
+                            color: $color-white;
+                        }
+                    }
+                }
+
+            
+                .header_master_man {
+                    position: absolute;
+                    width: 287px;
+                    height: 741px;
+                    top: 80px;
+                    right: 250px;
+                    z-index: -1;
+                }
+
+            .header_backImg_arrow {
+                position: absolute;
+                top: -30px;
+                right: -275px;
+                z-index: -2;
+            }
+
+        .header_counter {
+            @include bgc($color-white, 180px);
+            width: 100%;
+            margin-top: 180px;
+            .header_counter_list {
+                @include display(center, start);
+                .counter_num {
+                    @include text(80px, 'Open_Sans', 400, $color-blue);
+                }
+                span {
+                    @include text(18px, 'Open_Sans', 400, $color-black);
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .cat_arrow {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translate(-50%);
+            animation: 1s animCat linear infinite alternate;
+            display: none;
+            z-index: 0;
+        }
+
+    }
+    // End header
+
+    .trust_us{
+        @include bgc($bgc, 392px);
+        padding: 100px 0;
+        position: relative;
+        z-index: 1;
+
+        .trustUs_carousel {
+            overflow: hidden;
+        }
+
+        .trustUs_carousel_item {
+            max-width: 850px;
+            display: flex;
+            transition: .5s;
+        }
+        .trustUs_corusel_list {
+            min-width: 170px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .5s;
+        }
+
+        .prev, 
+        .next {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            background: transparent;
+            outline: none;
+            border: none;
+            z-index: 5;
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+
+    }
+    // End trust_us
+
+    .standard_service {
+        padding: 100px 0;
+        .title_text {
+            p {
+                @include text(18px, 'Montserrat', 400, $color-black);  
+            }
+        }
+        &_table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px;
+            margin-top: 40px;
+            .th_img,
+            .td_img,
+            .mobile_table_item_list {
+                position: relative;
+                text-align: center;
+                @include text(22px, 'Montserrat', 500, $color-white);
+                width: 392px;
+                height: 67px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+            .mobile_table_item_list {
+                height: 40px;
+            }
+            .hideTableList {
+                display: none;
+            }
+            .th_title,
+            .td_title {
+                width: 254px;
+                height: 67px;
+                background-color: $bgc;
+                text-align: center;
+                @include text(18px, 'Montserrat', 500, $color-black);
+                span {
+                    @include text(28px, 'Montserrat', 500, $color-blue);   
+                } 
+            }
+            .middle {
+                background-color: $bgc-light;
+            }
+        }
+        .td_title {
+            @include text(18px, 'Montserrat', 400, $color-black);
+
+            button {
+                width: 100%;
+                height: 100%;
+                border: 2px solid $color-green;
+                @include text(18px, 'Montserrat', 500, $color-green);
+                background-color: $color-white;
+                outline: none;
+                transition: .5s;
+                &:hover {
+                    background-color: $color-green-black;
+                    color: $color-white;
+                }
+            }
+        }
+
+        .standard_service_mobile {
+            &_list  {
+                width: 100%;
+                height: auto;
+                background-color: $color-white;
+                 border: 2px solid $color-green;
+                 border-radius: 10px;
+                 padding-top: 20px;
+                 text-align: center;
+                 margin-top: 30px;
+                 border-bottom: none;
+
+                 .fa-check-circle {
+                     color: $color-green
+                 }
+                }
+                 .services_mobile_text {
+                    @include text(26px, 'Montserrat', 500, $color-black);
+                    margin: 0;
+                    margin-top: 10px;
+                 }
+                 .services_mobile_textInfo {
+                    @include text(20px, 'Montserrat', 600, $color-blue); 
+                    strong {
+                        font-size: 24px;
+                        color: $color-green;
+                    } 
+                 }
+
+                 .standard_service_mobileBtn {
+                     width: 100%;
+                     height: 80px;
+                     background-color: $color-green;
+                     color: $color-white;
+                     margin-top: 30px;
+                     border: none;
+                     outline: none;
+                     @include text(20px, 'Montserrat', 500, $color-white);
+                     border-bottom-left-radius: 10px;
+                     border-bottom-right-radius: 10px;
+                 }
+            }
+    }
+    // End standard_service
+
+    .form {
+        @include bgc($bgc, 760px);
+        padding: 100px 0;
+        position: relative;
+        &_calculate_cost {
+            width: 100%;
+            .left {
+                h2 {
+                    @include text(48px, 'Open_Sans', 600, $color-black);
+                    line-height: 65px;
+                    span {
+                        color: $color-blue;
+                    }
+                }
+                p {
+                    @include text(18px, 'Montserrat', 500, $color-black); 
+                    margin: 0; 
+                }
+                button {
+                    width: 325px;
+                    height: 62px;
+                    border: 2px solid $color-green;
+                    @include text(18px, 'Montserrat', 500, $color-white);
+                    background-color: $color-green;
+                    outline: none;
+                    transition: .5s;
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    &:hover {
+                        background-color: $color-green-black;
+                    }
+                }
+                .sub_text {
+                    @include text(12px, 'Montserrat', 500, $color-black); 
+                    a {
+                        text-decoration: none;
+                    } 
+                }
+            }
+
+            .form_list {
+                width: 520px;
+                height: 560px;
+                border: 6px solid $color-green;
+                padding: 60px;
+                .inp_label,
+                .text_label {
+                    width: 100%;
+                    position: relative;
+                    margin: 0;
+
+                    .return_error {
+                        position: absolute;
+                        left: 0;
+                        bottom: 10px;
+                        color: $color-denger;
+                    }
+                }
+                    input {
+                        width: 100%;
+                        height: 65px;
+                        border: 1px solid $color-black;
+                        padding-left: 20px;
+                        @include text(18px, 'Montserrat', 500, $color-grey-light); 
+                        outline: none;
+                        background: $color-white;
+                        margin-bottom: 30px;
+                        &::placeholder {
+                            color: $color-grey-light;
+                            @include text(18px, 'Montserrat', 500, $color-grey-light); 
+                        }
+                        &:focus {
+                            border: 1px solid $color-green;
+                        }
+                    }
+                    .errorInp {
+                        border: 1px solid $color-denger;
+                    }
+                    textarea {
+                        width: 100%;
+                        height: 100px;
+                        resize: none;
+                        outline: none;
+                        padding: 20px;
+                        margin-bottom: 30px;
+                        @include text(18px, 'Montserrat', 500, $color-grey-light);
+                        border: 1px solid $color-black;
+
+                        &:focus {
+                            border: 1px solid $color-green !important;
+                        }
+                    }
+                    
+                    .file_label {
+                        height: 25px;
+                        position: relative;
+                        cursor: pointer;
+                        input {
+                            width: 100px;
+                            margin-left: 25px;
+                            // opacity: 0;
+                            cursor: pointer;
+                            display: none;
+                        }
+                        .fa-check-circle {
+                            display: none;
+                            color: $color-green;
+                            font-size: 20px;
+                        }
+
+                        .return_error {
+                            width: 200px;
+                            position: absolute;
+                            left: 0;
+                            bottom: -20px;
+                            color: $color-denger;
+                        }
+                    }
+                    
+                    .file_text {
+                        @include text(18px, 'Montserrat', 500, $color-black);  
+                        margin-right: 24px;
+                    }
+            }
+        }
+    }
+    // End section form
+
+    .leave_request {
+        padding: 100px 0;
+        .title_text {
+            p {
+                @include text(18px, 'Montserrat', 400, $color-green);
+            }
+        }
+        .request_item {
+            @include display(center, space-between);
+            flex-wrap: wrap;
+            margin-top: 65px;
+            .request_list {
+                @include display-diraction(center, center);
+            }
+            .circle {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: $bgc-light;
+                @include display(center, center);
+                color: $color-icon;
+                position: relative;
+                transition: .3s;
+
+                .line {
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 50%;
+                    position: absolute;
+                    border: 1px solid $color-blue;
+                    border-right: 1px solid transparent;
+                    transform: rotate(-45deg);
+                    transition: .6s;
+                }
+                .num {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $color-blue;
+                    @include text(18px, 'Open_Sans', 400, $color-white);
+                    @include display(center, center);
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                }
+                &:hover {
+                    background-color: $color-green;
+                    color: $color-white;
+                }
+                &:hover  .line {
+                   transform: rotateZ(320deg);
+                   border-color: $color-white;
+                   border-right-color: transparent ;
+               }
+
+            }
+
+            .sub_text {
+                width: 193px;
+                text-align: center;
+                margin-top: 20px;
+                span {
+                    @include text(18px, 'Montserrat', 500, $color-black);
+                }
+            }
+        }
+
+        .reviews {
+            margin-top: 100px;
+            .review_title {
+                margin-bottom: 60px;
+                h2 {
+                    @include text(48px, 'Open_Sans', 500, $color-black);
+                    text-align: center;
+                }
+            }
+            .review_list {
+                @include display-diraction(start, start);
+                .review_text {
+                    width: 100%;
+                    height: auto;
+                    background-color: $bgc;
+                    padding: 30px;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        right: 20px;
+                    }
+
+                    h3 {
+                        @include text(21px, 'Montserrat', 500, $color-blue);
+                    }
+                    p {
+                        @include text(16px, 'Montserrat', 400, $color-black);
+                        margin-top: 20px;
+                        line-height: 22,4px;
+                    }
+                }
+
+                .user_info {
+                    position: relative;
+                    left: 0;
+                    top: -20px;
+                    z-index: 5;
+                    @include display(center, center);
+
+                    h4 {
+                        @include text(16px, 'Montserrat', 500, $color-black);
+                        margin-left: 20px; 
+                    }
+                }
+            }
+        }
+    }
+    // End leave_request
+
+    .work_examples {
+        @include bgc($bgc, auto);
+        padding: 100px 0;
+        .example_list {
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 100%;
+            border: 2px solid $color-green;
+            padding: 30px;
+            @include display(center, space-between);
+
+            img {
+                width: 289px;
+                height: 200px;
+                object-fit: cover;
+            }
+            .text_info {
+                width: 700px;
+
+                h5 {
+                    @include text(22px, 'Montserrat', 500, $color-black);
+                }
+                
+                p {
+                    @include text(18px, 'Montserrat', 400, $color-black);
+                }
+            }
+        }
+    }
+
+    .our_team {
+        padding: 100px 0;
+        .our_team_container {
+            overflow: hidden;
+        }
+
+        .our_team_item {
+            max-width: 900px;
+            display: flex;
+            transition: .5s;
+        }
+        .our_team_list {
+            min-width: 300px;
+            height: auto;
+            transition: .5s;
+            text-align: center;
+            @include display-diraction(center, center);
+        }
+
+        .prevBtn, 
+        .nextBtn {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            background: transparent;
+            outline: none;
+            border: none;
+            z-index: 5;
+        }
+        .prevBtn {
+            left: 0;
+        }
+        .nextBtn {
+            right: 0;
+        }
+
+        .our_team_list {
+            text-align: center;
+            width: 320px;
+            @include display-diraction(center, center);
+
+            img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover
+            }
+            h5 {
+                // @include text(22px, 'Montserrat', 500, $color-black); 
+                margin-top: 18px;
+            }
+            p {
+                // @include text(18px, 'Montserrat', 500, $color-black);
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .documents {
+        @include bgc($bgc, auto);
+        padding: 100px 0;
+
+        .doc_item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .doc_middle_list {
+            margin: 0 10px;
+        }
+
+        .doc_list {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover  .hover{
+                background-color: #0009; 
+            }
+            .hover {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                cursor: pointer;
+                transition: .5s;
+            }
+            .addHoverDoc {
+               background-color: #0009; 
+               display: block;
+            }
+        }
+
+        .doc_middle{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+    }
+    // End documents
+
+    .our_services {
+        padding: 100px 0;
+        .services_list {
+            margin-top: 100px;
+            width: 100%;
+            max-height: 176px;
+            background-color: $bgc;
+            padding: 30px;
+            padding-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+            transition: .5s;
+
+            &_titleText {
+                @include text(24px, 'Open_Sans', 600, $color-black);
+                line-height: 32,68px;
+                margin-bottom: 90px;
+            }
+            &_info {
+                h5 {
+                    @include text(18px, 'Montserrat', 500, $color-blue); 
+                    margin-top: 10px;
+                }
+                p {
+                    @include text(18px, 'Montserrat', 500, $color-black);
+                    margin-bottom: 5px !important ;
+                }
+            }
+            img {
+                position: absolute;
+                left: 50%;
+                bottom: 30px;
+                transform: translateX(-50%);
+                cursor: pointer;
+            }
+            .background {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -400px;
+                z-index: -1;
+                opacity: .2;
+                transition: .5s;
+            }
+            
+            &:hover .background{
+                left: 0;
+                background-color: $color-green;
+            }
+        }
+
+        
+        .openList{
+            max-height: 500px;
+        }
+        .rotateBtn {
+            transform: rotate(180deg) !important;
+            left: 45% !important;
+        }
+        .removeMargin {
+            margin-bottom: 20px;
+        }
+        .circle {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: $color-blue;
+            @include display(center, center);
+
+            .line {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                border: 1px solid $color-white;
+                position: absolute;
+            }
+        }
+
+        .circle_middle {
+            background-color: $color-green;
+        }
+        .middle {
+            background-color: $bgc-light;
+           
+            &:hover .background{
+                left: 0;
+                background-color: $color-blue;
+            }
+        }
+
+        .questions {
+            margin-top: 100px;
+            @include display(center, center);
+            .questions_item {
+                @include display(center, center);
+                h3 {
+                    @include text(48px, 'Open_Sans', 600, $color-black); 
+                    line-height: 65,37px;
+                    width: 241px;
+                    span {
+                        color: $color-blue;
+                    }
+                }
+            }
+            .form_list {
+                width: 964px;
+                height: 350px;
+                background-image: url('../images/png/question.png');
+                background-repeat: no-repeat;
+                @include display(center, center);
+
+                div {
+                    width: 611px;
+                    margin-left: 250px;
+                    @include display-diraction(start, center);
+                    h4 {
+                        // @include text(24px, 'Montserrat-medium', $color-white);  
+                        line-height: 29px;  
+                    }
+                    form {
+                        @include display(center, space-between); 
+                        input {
+                            width: 280px;
+                            height: 62px;
+                            outline: none;
+                            background-color: $color-white;
+                            border: none;
+                            @include text(18px, 'Montserrat', 500, $color-grey-light);
+                            padding: 20px;
+
+                            &::placeholder {
+                                @include text(18px, 'Montserrat', 500, $color-grey-light);  
+                            }
+                        }
+                        button {
+                            width: 311px;
+                            height: 62px;
+                            background-color: $color-blue;
+                            @include text(18px, 'Montserrat', 500, $color-white); 
+                            border: 2px solid $color-blue;
+                            outline: none; 
+                            transition: .3s;
+                            margin-left: 20px;
+
+                            &:hover {
+                                background-color: $color-blue-black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End our_services
+
+    .map {
+        @include bgc(none, auto);
+        position: relative;
+
+        .contact_modal {
+            position: absolute;
+            width: 600px;
+            height: 493px;
+            top: 20px;
+            right: 352px;
+            background-color: $color-blue;
+            padding: 50px 50px 70px 70px;
+
+            h2 {
+                @include text(48px, 'Open_Sans', 400, $color-white);
+                margin-bottom: 40px;
+            }
+
+            p {
+                @include text(22px, 'Montserrat', 500, $color-white);  
+            }
+
+            a {
+                @include text(32px, 'Montserrat', 500, $color-green);  
+                margin-bottom: 20px;  
+            }
+
+            .contacts {
+                display: flex;
+                margin-top: 27px;
+                a {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    text-decoration: none;
+                    position: relative;
+                    color: $color-white;
+                    margin-right: 10px;
+
+                    &:hover {
+                        opacity: .8;
+                    }
+
+                    i,
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 20px;
+                    }
+                }
+                .facebook {
+                    background-color: #4E6297;
+                }
+                .twitter {
+                    background-color: #55ACE3;
+                }
+                .youtube {
+                    background-color: #E60000;
+                }
+                .instagram {
+                    background: linear-gradient(43.94deg, #EEA054 16.16%, #D64763 50.11%, #B62A99 83.68%);
+                }
+                .wk {
+                    background-color: #7294C7;
+                }
+                .telegram {
+                    background-color: #2F89CE;
+                }
+            }
+        }
+    }
+    // End map
+
+    footer {
+        padding: 60px 0;
+        background-color: $color-white;
+        a {
+            text-decoration: none;
+            @include text(14px, 'Montserrat', 500, $color-grey-light);
+
+            &:hover {
+                color: $color-blue;
+            }
+        }
+    }
+
+
+    .zoom {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: #0009;
+        z-index: 9999999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        &_document {
+            width: auto;
+            height: auto;
+            position: relative;
+    
+            &_img {
+                width: 400px;
+                // height: 90%;
+                object-fit: cover;
+            }
+            .close_zom_btn {
+                position: absolute;
+                right: -20px;
+                top: 0px;
+                color: $color-denger;
+                font-size: 50px;
+                background-color: #fff;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @keyframes openList {
+        from {
+            height: 176px;
+        }
+        to {
+            height: auto;
+        }
+    }
+
+    @keyframes animCat {
+        from {
+            transform: translateY(10px);
+        } to {
+            transform: translateY(-10px);
+        }
+    }
+
+    @import 'media'
