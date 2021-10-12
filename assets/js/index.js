@@ -8,7 +8,7 @@ window.addEventListener('load', ()=> {
 
    setTimeout(() => {
      loader.remove();
-  }, 5000);
+  }, 4000);
 
 
 // scroll
