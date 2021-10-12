@@ -2,13 +2,13 @@
 // DOMContentLoaded
 window.addEventListener('load', ()=> {
 
-//   let loader = document.querySelector('.loading__resume');
+  let loader = document.querySelector('.loading__resume');
 
-//   // loader.classList.add('hideLoader')
+  // loader.classList.add('hideLoader')
 
-//    setTimeout(() => {
-//      loader.remove();
-//   }, 5000);
+   setTimeout(() => {
+     loader.remove();
+  }, 5000);
 
 
 // scroll

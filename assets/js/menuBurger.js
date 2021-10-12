@@ -6,8 +6,6 @@ let mobileList = document.querySelectorAll('.nav_mobile li');
 
 const [l1, l2, l3, l4, l5 ] = mobileList;
 
-console.log(l1, l2, l3, l4, l5)
-
 mobileList.forEach(list => {
   list.addEventListener('click', () => {
     // list.classList.add('animate__bounceOutLeft')
