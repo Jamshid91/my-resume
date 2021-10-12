@@ -27,6 +27,22 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  overflow-x: hidden;
+}
+
+.body-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('../img/3d\ html\,css\,js.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* scrollbar */
 ::-webkit-scrollbar {
@@ -431,7 +447,8 @@ nav {
 
 /* start confidence */
   .confidence {
-    margin: 50px 0;
+    padding: 100px 0;
+    background-color: #fff;
   }
   .confidence_list {
     width: 300px;
@@ -475,7 +492,12 @@ nav {
 /* end confidence */
 
 main {
+  margin-top: 400px;
+  padding: 50px 0;
   padding-bottom: 50px;
+  background-color: #fff;
+  /* background: rgb(34,47,62);
+  background: linear-gradient(90deg, #2f3542 0%, rgba(87,101,116,1) 48%, rgba(131,149,167,1) 100%); */
 }
 
 main .my_photo {
@@ -484,6 +506,8 @@ main .my_photo {
   object-fit: cover;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 main h2,
@@ -496,7 +520,7 @@ main h2,
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
   text-transform: uppercase;
-  color: #0a3d62;
+  color: #222f3e;
   letter-spacing: 3px;
   margin-bottom: 75px;
 }
@@ -507,7 +531,7 @@ main h2,
   width: 100%;
   top: 50px;
   right: 20px;
-  z-index: -1;
+  z-index: 0;
   padding: 20px 0 0 10px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -541,7 +565,8 @@ li strong {
 
 
 .education {
-  margin: 100px 0;
+  padding: 100px 0;
+  background-color: #fff;
 }
 
 .education img {
@@ -584,6 +609,11 @@ li strong {
 }
 /* End edication */
 
+.experience {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
 .experience img {
   height: 350px;
   object-fit: cover;
@@ -607,12 +637,12 @@ li strong {
 .energo_info,
 .barkamol_info {
   width: 100%;
-  height: 230px;
+  height: 250px;
   background-color: #7ed6df;
   padding: 20px;
   position: absolute;
   z-index: 0;
-  top: -110px;
+  top: -130px;
   opacity: 0;
   transition: 1s ease-in-out;
 }
@@ -669,21 +699,8 @@ li strong {
   display: block;
   margin: 0;
   padding-left: 20px;
-  max-height: 100px;
+  max-height: 110px;
   overflow-y: scroll;
-}
-.myWork_info ul::-webkit-scrollbar {
-    width: 2px;
-}
- 
-.myWork_info ul::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-}
- 
-.myWork_info ul::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 .gitHub {
   display: flex;
@@ -750,7 +767,6 @@ li strong {
 /* End experience  */
 
 .counter {
-  margin-top: 100px;
   background-color: #2e2e2e;
   padding: 50px 0;
 }
@@ -906,6 +922,7 @@ li strong {
 /* Start  contacts*/
 .contacts {
   padding: 50px 0;
+  background-color: #fff;
 }
 
 .contact_list {
@@ -1161,13 +1178,22 @@ footer {
     /* padding-top: 200px; */
     height: 100vh;
   }
+  .body-bg {
+    display: none;
+  }
 
   header h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .contact_list {
     width: 60px;
     height: 60px;
+  }
+  main {
+    margin-top: 0;
+  }
+  .confidence {
+    padding: 0 !important;
   }
 }
 
@@ -1223,12 +1249,9 @@ footer {
     font-size: 13px;
   }
 
-  .confidence {
-    margin-top: 0 !important;
-  }
 
   .confidence_list {
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
   }
 
 

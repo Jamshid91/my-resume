@@ -71,7 +71,6 @@ openContact.addEventListener('click', () => {
   }
 
   else {
-    console.dir(openContact)
     openContact.firstElementChild.classList.add('rotateIcon')
     telegram.style.left = '50px'
     instagram.style.left = '50px'
@@ -169,12 +168,11 @@ closeLetcopProjects.addEventListener('click', () => {
 });
 
 let header = document.getElementById('header');
+let bodyBGPattern = document.querySelector('.body-bg');
 
 window.addEventListener('scroll', () => {
   let clipValue = scrollY / 7;
   header.style.clipPath = `polygon(0 0, 100% 0, 100% 100%, 50% ${100 - clipValue + '%'}, 0 100%)`
 
-  // polygon(0 0, 100% 0%, 100% ${100 - clipValue + '%'}, 0% 100%)
-
-  console.log(clipValue)
+  // bodyBGPattern.style.backgroundPosition = +window.pageYOffset + 'px'
 })
